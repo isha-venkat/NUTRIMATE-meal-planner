@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.cdnfonts.com/css/apricot" rel="stylesheet">
+    <title>Nutrimate</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="signuppage.css" rel="stylesheet">
+    <script src="signuppage.js" defer></script>
+
+</head>
+
+<body>
+    <div class="page-transition-overlay"></div>
+    <div class="left-side">
+        <h1 class="title">Nutrimate</h1>
+        <p class="slogan">Your personal guide to eating smart and living well.</p>
+        <a href="loginpage.html" class="login-page">Login Page</a>
+
+    </div>
+    <div class="right-side">
+        <h2 class="Create">Create Account</h2>
+        <form action="http://localhost:3000/signup" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="height">Height (cm):</label>
+                    <select id="height" name="height">
+                        <option value="">Select height</option>
+                        <script>
+                            for (let i = 50; i <= 272; i++) {
+                                document.write(`<option value="${i}">${i} cm</option>`);
+                            }
+                        </script>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <select id="weight" name="weight">
+                        <option value="">Select weight</option>
+                        <script>
+                            for (let i = 30; i <= 200; i++) {
+                                document.write(`<option value="${i}">${i} kg</option>`);
+                            }
+                        </script>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="goal">Goal:</label>
+                    <select id="goal" name="goal">
+                        <option value="Goal">Select Goal</option>
+                        <option value="bulking">Bulking</option>
+                        <option value="cutting">Cutting</option>
+                        <option value="maintaining">Maintaining</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">Sign Up</button>
+            <p class="error-message general-error-message"></p>
+            <button type="submit" class="submit-button">Sign Up</button>
+
+        </form>
+
+
+</html>

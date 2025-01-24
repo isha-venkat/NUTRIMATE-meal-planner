@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrimate</title>
+  <link href="https://fonts.cdnfonts.com/css/apricot" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="firstpage.css" rel="stylesheet">
+  <script src="firstpage.js" defer></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="page-transition-overlay"></div>
+  <header>
+    <div class="logo">Nutrimate</div>
+    <nav>
+      <a href="./firstPage.html">Home</a>
+      <a href="../secondpage/secondPage.html">Ingredient-Based Recipe</a>
+      <a href="../thirdpage/thirdpage.html">Recipes</a>
+      <a href="../fourthpage/profile.html">Profile</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero-section">
+      <h1>Welcome to Nutrimate</h1>
+      <p>Discover a world of healthy and delicious recipes</p>
+      <a href="../thirdpage/thirdpage.html" class="cta-button">Explore Recipes</a>
+    </div>
+  </main>
+  <div class="content">
+    <h2>Suggested Recipes</h2>
+    <div class="recipe-cards-container" id="suggestedRecipesContainer"></div>
+  </div>
+
+  <div class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <button class="popup-close" id="closePopup">Close</button>
+    <h2 id="popupTitle"></h2>
+    <p id="popupIngredients"></p>
+    <p id="popupProteins"></p>
+    <p id="popupCarbs"></p>
+    <p id="popupFat"></p>
+    <p id="popupTotalCalories"></p>
+    <p id="popupInstructions"></p>
+  </div>
+
+  <div id="cookieConsent" class="cookie-consent">
+    <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
+    <button id="acceptCookies">Accept</button>
+    <button id="declineCookies">Decline</button>
+  </div>
+</body>
+
+</html>

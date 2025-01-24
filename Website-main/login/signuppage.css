@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    background: url('login_background.JPG') no-repeat center center fixed;
+    background-size: cover;
+    gap: 5px;
+    overflow: hidden;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.8s ease-in-out;
+    /* Transition effect */
+}
+
+body.loaded {
+    opacity: 1;
+    /* Fade in */
+}
+
+.left-side {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 650px;
+    border: none;
+    left: 10%;
+    top: 10%;
+}
+
+.right-side {
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    position: absolute;
+    width: 700px;
+    height: 650px;
+    border: none;
+    left: 44%;
+    top: 10%;
+}
+
+.form-row {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    position: relative;
+    width: 80%;
+    top: 20%;
+    margin-bottom: 30px;
+    left: 8%;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.title {
+    font-size: 500%;
+    color: white;
+    font-family: 'Apricot', sans-serif;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+
+}
+
+.slogan {
+    font-size: 100%;
+    color: white;
+    font-family: 'Apricot', sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+
+}
+
+.Create {
+    font-size: 200%;
+    color: rgb(0, 0, 0);
+    font-family: 'Apricot', sans-serif;
+    position: absolute;
+    left: 35%;
+
+}
+
+.sign {
+    right: 0;
+    color: white;
+    font-family: 'Apricot', sans-serif;
+    text-align: center;
+}
+
+.login-page {
+    position: absolute;
+    padding: 20px 100px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: linear-gradient(135deg, #6d9e33, #88c144);
+    bottom: 35%;
+    right: 20%;
+    color: white;
+    text-decoration: none;
+}
+
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 300px;
+    /* Make input fields wider */
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+    /* Added padding for larger input fields */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 2%;
+    left: 43%;
+    align-items: center;
+
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.loading {
+    display: none;
+    margin-left: 10px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+#height,
+#weight,
+#goal {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+}
+
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

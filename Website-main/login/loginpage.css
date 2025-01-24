@@ -1,0 +1,224 @@
+:root {
+    --primary-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-color: rgba(255, 255, 255, 0.9);
+    --visual-section-bg: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    background: url('login_background.JPG') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.card-container {
+    display: flex;
+    width: 1000px;
+    max-width: 90%;
+    margin: auto;
+    background: var(--overlay-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px var(--shadow-color);
+    overflow: hidden;
+    position: relative;
+    backdrop-filter: blur(10px);
+    left: 12%;
+}
+
+.visual-section {
+    flex: 1;
+    background: var(--visual-section-bg);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .visual-section {
+        padding: 20px;
+    }
+}
+
+.brand-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-name {
+    font-size: 500%;
+    font-family: 'Apricot', sans-serif;
+    margin-bottom: 15px;
+}
+
+.brand-tagline {
+    font-size: 120%;
+    font-family: 'Apricot', sans-serif;
+    opacity: 0.9;
+}
+
+.login-section {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.login-header {
+    margin-bottom: 40px;
+}
+
+.login-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus {
+    border-color: #6d9e33;
+    background: white;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(109, 158, 51, 0.1);
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 6px;
+    display: block;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #6d9e33, #88c144);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(109, 158, 51, 0.2);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.extra-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.extra-links a {
+    color: #6d9e33;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .card-container {
+        flex-direction: column;
+        max-width: 95%;
+        margin: 20px auto;
+    }
+
+    .visual-section {
+        padding: 30px;
+    }
+
+    .login-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-section {
+        padding: 20px;
+    }
+
+    .visual-section {
+        display: none;
+    }
+}
+
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

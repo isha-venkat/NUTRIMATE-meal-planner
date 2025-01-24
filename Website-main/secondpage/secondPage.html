@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrimate</title>
+    <link href="https://fonts.cdnfonts.com/css/apricot" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="secondpage.css" rel="stylesheet">
+    <script src="secondpage.js" defer></script>
+</head>
+
+<body>
+    <div class="page-transition-overlay"></div>
+    <header>
+        <div class="logo">Nutrimate</div>
+        <nav>
+            <a href="../firstpage/firstPage.html">Home</a>
+            <a href="./secondPage.html">Ingredient-Based Recipe</a>
+            <a href="../thirdpage/thirdpage.html">Recipes</a>
+            <a href="../fourthpage/profile.html">Profile</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="text-above-search">Find Recipes by Ingredient</div>
+            <form id="searchForm">
+                <input type="text" placeholder="Search..." class="search-bar" name="ingredient">
+                <button type="submit" style="display:none;">Search</button>
+            </form>
+
+            <div class="results-container" id="resultsContainer"></div>
+            <div class="no-results" id="noResults">No results found</div>
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+                <button class="popup-close" id="closePopup">Close</button>
+                <h2 id="popupTitle"></h2>
+                <p id="popupIngredients"></p>
+                <p id="popupProteins"></p>
+                <p id="popupCarbs"></p>
+                <p id="popupFat"></p>
+                <p id="popupTotalCalories"></p>
+                <p id="popupInstructions"></p>
+            </div>
+
+            <div class="square-box-container">
+                <div class="square-box" id="proteinBox">
+                    <img class="img1" src="Protein.png" alt="Protein">
+                    <button id="proteinButton" class="btn btn-dark">Protein</button>
+                </div>
+                <div class="square-box" id="carbsBox">
+                    <img class="img2" src="Carbohydrates.png" alt="Carbohydrates">
+                    <button id="carbsButton" class="btn btn-dark">Carbohydrates</button>
+                </div>
+                <div class="square-box" id="fatsBox">
+                    <img class="img3" src="fats.png" alt="fats">
+                    <button id="fatsButton" class="btn btn-dark">Fats</button>
+                </div>
+            </div>
+            <button id="backButton" class="btn btn-secondary">Back</button>
+        </div>
+        <div class="loading-overlay">
+            <div class="spinner"></div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
