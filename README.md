@@ -15,3 +15,37 @@ Nutrimate is a smart meal planner app designed to help you maintain a healthy an
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/nutrimate.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd nutrimate
+
+3. Install backend dependencies:
+   ```bash
+   npm install
+
+4. Set up the database:
+<br> . Import the Nutrimate-2.sql file in the database/ folder into MySQL.
+<br> . Configure the .env file with your database credentials.
+
+5. Run the server:
+   ```bash
+   npm start
+
+6. Open the website:
+<br>. Navigate to frontend/index.html in your browser or set up a simple local server (e.g., using VS Code Live Server or Python's http.server).
+   
+### Future Scope
+
+.🏋️‍♂️ Integration with fitness tracking apps.
+<br> .🔮 AI-powered meal recommendations based on user habits.
+<br> .📊 Advanced analytics for daily nutritional insights.
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Connect with Me
+💼 LinkedIn : [https://www.linkedin.com/in/isha-venkateswaran-235954251/]
+🌐 GitHub : [https://github.com/isha-venkat]
+
+
